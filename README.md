@@ -15,3 +15,24 @@ the guesser makes an initial guess which is a fixed guess, and then from the fee
 
 The next guess made is the best guess which is the one with lowest average remaining candidates, which means that if that guess were incorrect it would on average take the average number of guesses for reaching the correct guess.
 
+# Running the game
+Compile using ghc -O2 --make Main, to run test. for example ./Main would search for the target "F1 D2 G4". It will then use the Proj2 module to guess the target; the output will look something like:
+
+```
+Searching for target F1 D2 G4
+Your guess #1:  A1 G3 H3
+    My answer:  (0,2,0)
+Your guess #2:  A4 B4 H4
+    My answer:  (0,1,1)
+Your guess #3:  D4 E4 G4
+    My answer:  (1,0,2)
+Your guess #4:  D1 D2 G4
+    My answer:  (2,1,0)
+Your guess #5:  D2 E1 G4
+    My answer:  (2,1,0)
+Your guess #6:  D2 E2 G4
+    My answer:  (2,1,0)
+Your guess #7:  D2 F1 G4
+    My answer:  (3,0,0)
+You got it in 7 guesses!
+```
